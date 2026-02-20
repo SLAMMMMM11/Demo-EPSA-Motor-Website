@@ -54,16 +54,25 @@
   </nav>
 
   <div class="modal fade model-survey-modal" id="modelSurveyModal" tabindex="-1" aria-labelledby="modelSurveyTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title h5 mb-0" id="modelSurveyTitle">Encuentra tu modelo ideal</h2>
+          <div>
+            <p class="survey-kicker mb-1">Sondeo comercial EPSA Motor</p>
+            <h2 class="modal-title h4 mb-0" id="modelSurveyTitle">Encuentra tu Torito ideal en menos de 1 minuto</h2>
+          </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <form id="modelSurveyForm">
           <div class="modal-body">
+            <p class="survey-lead mb-3">Responde 3 preguntas y te mostraremos el modelo recomendado para tu tipo de trabajo, con datos de potencia, consumo y capacidad.</p>
+            <div class="survey-trust-row mb-3">
+              <div class="survey-trust-chip"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Recomendaci&oacute;n inmediata</div>
+              <div class="survey-trust-chip"><i class="fa-solid fa-user-tie" aria-hidden="true"></i> Asesor&iacute;a comercial guiada</div>
+              <div class="survey-trust-chip"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Sin costo y sin compromiso</div>
+            </div>
             <fieldset class="mb-3">
-              <legend class="h6 mb-2">1. ¿Qué tipo de moto buscas?</legend>
+              <legend class="survey-step-title"><span>1</span> &iquest;Qu&eacute; tipo de moto buscas?</legend>
               <div class="d-flex flex-wrap gap-2">
                 <label class="survey-pill"><input type="radio" name="usage" value="pasajeros" required /> Pasajeros</label>
                 <label class="survey-pill"><input type="radio" name="usage" value="carga" required /> Carga / Mixto</label>
@@ -71,7 +80,7 @@
             </fieldset>
 
             <fieldset class="mb-3">
-              <legend class="h6 mb-2">2. ¿Qué combustible prefieres?</legend>
+              <legend class="survey-step-title"><span>2</span> &iquest;Qu&eacute; combustible prefieres?</legend>
               <div class="d-flex flex-wrap gap-2">
                 <label class="survey-pill"><input type="radio" name="fuel" value="gasolina" required /> Gasolina</label>
                 <label class="survey-pill"><input type="radio" name="fuel" value="glp" required /> GLP</label>
@@ -81,17 +90,17 @@
             </fieldset>
 
             <fieldset>
-              <legend class="h6 mb-2">3. ¿Qué priorizas?</legend>
+              <legend class="survey-step-title"><span>3</span> &iquest;Qu&eacute; priorizas en tu compra?</legend>
               <div class="d-flex flex-wrap gap-2">
-                <label class="survey-pill"><input type="radio" name="priority" value="economia" required /> Economía</label>
+                <label class="survey-pill"><input type="radio" name="priority" value="economia" required /> Econom&iacute;a</label>
                 <label class="survey-pill"><input type="radio" name="priority" value="potencia" required /> Potencia</label>
                 <label class="survey-pill"><input type="radio" name="priority" value="capacidad" required /> Capacidad de carga</label>
               </div>
             </fieldset>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Ver catálogo completo</button>
-            <button type="submit" class="btn btn-epsa">Ver recomendación</button>
+            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Ver cat&aacute;logo completo</button>
+            <button type="submit" class="btn btn-epsa survey-submit-btn"><i class="fa-solid fa-magnifying-glass me-2" aria-hidden="true"></i>Ver recomendaci&oacute;n</button>
           </div>
         </form>
       </div>
@@ -374,3 +383,4 @@
   <script defer src="../assets/js/pages/modelos.js"></script>
 </body>
 </html>
+

@@ -87,6 +87,21 @@ img {
   position: relative;
 }
 
+.hero-slide-first {
+  background-size: 122% auto;
+  background-position: center center;
+}
+
+.hero-slide-second {
+  background-size: 122% auto;
+  background-position: center center;
+}
+
+.hero-slide-third {
+  background-size: 122% auto;
+  background-position: center center;
+}
+
 .hero-slide::before {
   content: "";
   position: absolute;
@@ -418,6 +433,22 @@ img {
 
 .finance-cta p {
   color: #d1d5db;
+}
+
+.finance-logos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.finance-logos img {
+  width: 100%;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.35rem 0.4rem;
 }
 
 .faq-section {
@@ -864,16 +895,46 @@ img {
   position: fixed;
   left: 1rem;
   bottom: 1rem;
-  width: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 56px;
   height: 56px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background-color: var(--epsa-whatsapp);
+  padding: 0 0.9rem 0 0.95rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #18c964, #25d366 55%, #4be081);
+  border: 1px solid rgba(255, 255, 255, 0.34);
   color: #fff;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.35), 0 0 0 0 rgba(37, 211, 102, 0.45);
+  animation: whatsappPulse 2s ease-in-out infinite;
   z-index: 1080;
+}
+
+.whatsapp-float::after {
+  content: "WhatsApp";
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.whatsapp-float:hover {
+  color: #fff;
+  transform: translateY(-1px) scale(1.02);
+}
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.35), 0 0 0 0 rgba(37, 211, 102, 0.46);
+  }
+  70% {
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.35), 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.35), 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }
 
 .scroll-up {
@@ -892,6 +953,301 @@ img {
   z-index: 1080;
 }
 
+.model-ticker-section {
+  background: linear-gradient(180deg, #0b0f16, #0d1119);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.model-ticker-shell {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.8rem;
+  padding: 1rem 1.1rem;
+}
+
+.model-ticker-shell p {
+  color: #d1d5db;
+}
+
+.model-ticker-wrap {
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 4%, black 96%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 4%, black 96%, transparent 100%);
+}
+
+.model-ticker-track {
+  display: flex;
+  gap: 0.85rem;
+  width: max-content;
+  padding-inline: 0.8rem;
+  animation: modelTickerFlow 58s linear infinite;
+  will-change: transform;
+}
+
+.model-ticker-wrap:hover .model-ticker-track {
+  animation-play-state: paused;
+}
+
+.ticker-model-card {
+  width: min(390px, 90vw);
+  background:
+    radial-gradient(circle at 10% 8%, rgba(59, 130, 246, 0.34), transparent 44%),
+    radial-gradient(circle at 92% 88%, rgba(239, 68, 68, 0.28), transparent 50%),
+    linear-gradient(168deg, #1f2a3f 0%, #182339 46%, #0d1628 100%);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.33);
+  transition: transform 0.26s ease, box-shadow 0.26s ease, border-color 0.26s ease;
+  position: relative;
+}
+
+.ticker-model-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(122deg, rgba(255, 255, 255, 0.2), transparent 30%, transparent 70%, rgba(255, 255, 255, 0.06)),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.12), transparent 56%);
+  opacity: 0.8;
+}
+
+.ticker-model-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.38);
+  box-shadow: 0 25px 46px rgba(0, 0, 0, 0.48);
+}
+
+.ticker-model-image {
+  width: 100%;
+  height: 218px;
+  object-fit: contain;
+  background:
+    radial-gradient(circle at 50% -12%, rgba(148, 163, 184, 0.24), transparent 46%),
+    linear-gradient(180deg, rgba(17, 24, 39, 0.72), rgba(10, 15, 26, 0.9));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.56rem;
+}
+
+.ticker-model-body {
+  padding: 0.78rem 0.85rem 0.88rem;
+}
+
+.ticker-model-title {
+  margin: 0 0 0.55rem;
+  font-size: 1.22rem;
+  color: #fff;
+  letter-spacing: 0.01em;
+  font-family: "Manrope", "Segoe UI", Arial, sans-serif;
+  font-weight: 800;
+  text-wrap: balance;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.28);
+}
+
+.ticker-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 64px;
+  gap: 0.55rem;
+  align-items: stretch;
+}
+
+.ticker-specs-main {
+  min-width: 0;
+}
+
+.ticker-specs-side {
+  display: grid;
+  place-items: center;
+  justify-items: start;
+}
+
+.ticker-model-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.ticker-model-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.38rem;
+  color: #e7ecf5;
+  font-size: 0.85rem;
+}
+
+.ticker-model-list i {
+  color: #c7d2fe;
+  font-size: 0.78rem;
+  width: 0.9rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.model-detail-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.model-detail-image {
+  width: 100%;
+  max-height: 370px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.8rem;
+}
+
+.model-detail-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 0.8rem;
+}
+
+.model-detail-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.32rem 0.62rem;
+  color: #e5e7eb;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.model-detail-specs {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.model-detail-specs li {
+  margin-bottom: 0.28rem;
+  color: #e5e7eb;
+}
+
+.ticker-model-actions {
+  margin-top: 0.65rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.ticker-model-btn {
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  padding: 0.38rem 0.62rem;
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.ticker-model-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.12));
+}
+
+.ticker-model-btn-primary {
+  border-color: rgba(204, 17, 17, 0.9);
+  background: linear-gradient(180deg, rgba(230, 47, 47, 0.95), rgba(180, 12, 12, 0.95));
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(146, 18, 18, 0.34);
+}
+
+.ticker-model-btn-primary:hover {
+  border-color: rgba(255, 89, 89, 0.95);
+  background: linear-gradient(180deg, rgba(245, 64, 64, 1), rgba(195, 16, 16, 1));
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(146, 18, 18, 0.42);
+}
+
+.ticker-model-wa-float {
+  position: relative;
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: #fff;
+  background: radial-gradient(circle at 30% 20%, #5bf29b, #25d366 58%, #11a84d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  box-shadow: 0 10px 22px rgba(12, 22, 19, 0.38), 0 0 0 0 rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  transform: translateX(-8px);
+  animation: tickerWhatsappPulse 1.8s ease-out infinite;
+}
+
+.ticker-model-wa-float i {
+  font-size: 1.02rem;
+}
+
+.ticker-model-wa-float::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 999px;
+  border: 1px solid rgba(37, 211, 102, 0.65);
+  opacity: 0.75;
+  animation: tickerWhatsappRing 1.8s ease-out infinite;
+  pointer-events: none;
+}
+
+.ticker-model-wa-float:hover {
+  color: #fff;
+  transform: translateX(-8px) scale(1.12);
+  box-shadow: 0 14px 24px rgba(12, 22, 19, 0.44), 0 0 0 10px rgba(37, 211, 102, 0);
+  filter: saturate(1.15);
+}
+
+@keyframes tickerWhatsappPulse {
+  0% {
+    box-shadow: 0 10px 22px rgba(12, 22, 19, 0.38), 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  70% {
+    box-shadow: 0 10px 22px rgba(12, 22, 19, 0.38), 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 10px 22px rgba(12, 22, 19, 0.38), 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes tickerWhatsappRing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes modelTickerFlow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 768px) {
   .topbar {
     font-size: 0.82rem;
@@ -907,6 +1263,15 @@ img {
 
   .hero-slide {
     min-height: 62vh;
+  }
+
+  .hero-slide-first {
+    background-size: cover;
+  }
+
+  .hero-slide-second,
+  .hero-slide-third {
+    background-size: cover;
   }
 
   .hero-layout {
@@ -941,6 +1306,10 @@ img {
     font-size: 1.25rem;
   }
 
+  .finance-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .social-section-card {
     padding: 1rem;
   }
@@ -967,5 +1336,33 @@ img {
 
   .testimonial-tile {
     width: 250px;
+  }
+
+  .ticker-model-card {
+    width: min(340px, 90vw);
+  }
+
+  .ticker-model-image {
+    height: 190px;
+  }
+
+  .model-ticker-track {
+    animation-duration: 72s;
+  }
+
+  .ticker-specs-grid {
+    grid-template-columns: 1fr 56px;
+  }
+
+  .whatsapp-float {
+    width: 56px;
+    min-width: 56px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .whatsapp-float::after {
+    content: "";
+    display: none;
   }
 }
