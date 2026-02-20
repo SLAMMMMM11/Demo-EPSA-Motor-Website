@@ -24,6 +24,7 @@
         <a class="me-2" href="tel:+51907721481">907-721-481</a>
         <a class="me-2" href="https://wa.link/cewyh2" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         <a class="me-2" href="https://www.youtube.com/@toritobajaj723" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a class="me-2" href="https://www.tiktok.com/@bajajepsamotor" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         <a href="https://www.instagram.com/bajajmotorperu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
@@ -32,7 +33,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
     <div class="container">
       <a class="navbar-brand" href="../index.html"><img src="../assets/media/images/EPSA.png" alt="EPSA Motor" decoding="async" /></a>
-      <div class="brand-strip d-none d-lg-flex align-items-center gap-2 ms-2">
+      <div class="brand-strip d-none d-lg-flex align-items-center gap-2">
         <img src="../assets/media/images/torito.png" alt="Torito" decoding="async" />
         <img src="../assets/media/images/bajaj_favorita.png" alt="Bajaj" decoding="async" />
       </div>
@@ -52,6 +53,51 @@
     </div>
   </nav>
 
+  <div class="modal fade model-survey-modal" id="modelSurveyModal" tabindex="-1" aria-labelledby="modelSurveyTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5 mb-0" id="modelSurveyTitle">Encuentra tu modelo ideal</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <form id="modelSurveyForm">
+          <div class="modal-body">
+            <fieldset class="mb-3">
+              <legend class="h6 mb-2">1. ¿Qué tipo de moto buscas?</legend>
+              <div class="d-flex flex-wrap gap-2">
+                <label class="survey-pill"><input type="radio" name="usage" value="pasajeros" required /> Pasajeros</label>
+                <label class="survey-pill"><input type="radio" name="usage" value="carga" required /> Carga / Mixto</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="mb-3">
+              <legend class="h6 mb-2">2. ¿Qué combustible prefieres?</legend>
+              <div class="d-flex flex-wrap gap-2">
+                <label class="survey-pill"><input type="radio" name="fuel" value="gasolina" required /> Gasolina</label>
+                <label class="survey-pill"><input type="radio" name="fuel" value="glp" required /> GLP</label>
+                <label class="survey-pill"><input type="radio" name="fuel" value="gnv" required /> GNV</label>
+                <label class="survey-pill"><input type="radio" name="fuel" value="indiferente" required /> Indiferente</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="h6 mb-2">3. ¿Qué priorizas?</legend>
+              <div class="d-flex flex-wrap gap-2">
+                <label class="survey-pill"><input type="radio" name="priority" value="economia" required /> Economía</label>
+                <label class="survey-pill"><input type="radio" name="priority" value="potencia" required /> Potencia</label>
+                <label class="survey-pill"><input type="radio" name="priority" value="capacidad" required /> Capacidad de carga</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Ver catálogo completo</button>
+            <button type="submit" class="btn btn-epsa">Ver recomendación</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <main>
     <section class="page-hero py-5">
       <div class="container">
@@ -64,11 +110,34 @@
       <div class="container">
         <article class="modelos-intro mb-4">
           <p class="about-kicker mb-2">Catálogo EPSA Motor</p>
-          <h2 class="section-title mb-2">Todos los modelos disponibles en nuestras imágenes</h2>
+          <h2 class="section-title mb-2">Todos los modelos disponibles en nuestras sedes</h2>
           <p class="mb-0">Información técnica referencial para orientación comercial. Confirmar disponibilidad, versiones y equipamiento al momento de cotizar.</p>
           <p class="mb-0 mt-2"><small>Última revisión referencial: febrero de 2026.</small></p>
         </article>
 
+        <section id="modelRecommendation" class="model-recommendation d-none" aria-live="polite">
+          <article class="model-feature-card">
+            <p class="about-kicker mb-2">Resultado del sondeo</p>
+            <h3 class="section-title mb-2" id="recommendedModelName">Modelo recomendado</h3>
+            <p class="mb-3" id="recommendedModelDescription"></p>
+            <div class="row g-4 align-items-center">
+              <div class="col-lg-5">
+                <img id="recommendedModelImage" class="img-fluid model-feature-image" src="" alt="Modelo recomendado" loading="lazy" decoding="async" />
+              </div>
+              <div class="col-lg-7">
+                <div id="recommendedModelFacts" class="model-facts-grid model-facts-reco"></div>
+                <ul id="recommendedModelSpecs" class="model-feature-specs"></ul>
+                <div class="model-feature-actions">
+                  <a id="recommendedModelQuoteLink" href="cotiza.html" class="btn btn-epsa">Cotizar este modelo</a>
+                  <button id="retrySurveyBtn" type="button" class="btn btn-outline-light">Responder sondeo otra vez</button>
+                  <button id="showCatalogBtn" type="button" class="btn btn-outline-light">Ver todos los modelos</button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <div id="catalogSection">
         <div class="filter-section">
           <button class="filter-btn active" data-filter="all">Todos</button>
           <button class="filter-btn" data-filter="pasajeros">Pasajeros</button>
@@ -78,7 +147,7 @@
         </div>
 
         <div class="row g-4" id="model-list">
-          <div class="col-md-6 col-xl-4 filter-item pasajeros 4t">
+          <div class="col-md-6 col-xl-4 filter-item pasajeros 4t" data-capacity="3 pasajeros" data-load="350 kg" data-consumption="Alto rendimiento urbano" data-brakes="Tambor delantero y trasero" data-warranty="12 meses o 20,000 km" data-maintenance="Cada 5,000 km">
             <article class="model-card-modern">
               <img src="../assets/media/images/4T PLUS GSL.png" alt="Modelo 4T Plus GSL" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
@@ -97,7 +166,7 @@
             </article>
           </div>
 
-          <div class="col-md-6 col-xl-4 filter-item pasajeros 4t">
+          <div class="col-md-6 col-xl-4 filter-item pasajeros 4t" data-capacity="3 pasajeros" data-load="340 kg" data-consumption="Bajo costo por GLP" data-brakes="Tambor delantero y trasero" data-warranty="12 meses o 20,000 km" data-maintenance="Cada 5,000 km">
             <article class="model-card-modern">
               <img src="../assets/media/images/4T PLUS GLP.png" alt="Modelo 4T Plus GLP" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
@@ -116,7 +185,7 @@
             </article>
           </div>
 
-          <div class="col-md-6 col-xl-4 filter-item pasajeros 4t">
+          <div class="col-md-6 col-xl-4 filter-item pasajeros 4t" data-capacity="3 pasajeros" data-load="330 kg" data-consumption="Ahorro mixto GNV/Gasolina" data-brakes="Tambor delantero y trasero" data-warranty="12 meses o 20,000 km" data-maintenance="Cada 5,000 km">
             <article class="model-card-modern">
               <img src="../assets/media/images/4T PLUS GNV.png" alt="Modelo 4T Plus GNV" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
@@ -135,7 +204,7 @@
             </article>
           </div>
 
-          <div class="col-md-6 col-xl-4 filter-item pasajeros 2t">
+          <div class="col-md-6 col-xl-4 filter-item pasajeros 2t" data-capacity="3 pasajeros" data-load="320 kg" data-consumption="Consumo referencial bajo" data-brakes="Tambor delantero y trasero" data-warranty="12 meses o 20,000 km" data-maintenance="Cada 4,000 km">
             <article class="model-card-modern">
               <img src="../assets/media/images/2T UG GSL.png" alt="Modelo 2T UG GSL" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
@@ -154,7 +223,7 @@
             </article>
           </div>
 
-          <div class="col-md-6 col-xl-4 filter-item pasajeros 2t">
+          <div class="col-md-6 col-xl-4 filter-item pasajeros 2t" data-capacity="3 pasajeros" data-load="320 kg" data-consumption="Ahorro operativo con GLP" data-brakes="Tambor delantero y trasero" data-warranty="12 meses o 20,000 km" data-maintenance="Cada 4,000 km">
             <article class="model-card-modern">
               <img src="../assets/media/images/2T UG GLP.png" alt="Modelo 2T UG GLP" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
@@ -173,7 +242,7 @@
             </article>
           </div>
 
-          <div class="col-md-6 col-xl-4 filter-item carga 4t">
+          <div class="col-md-6 col-xl-4 filter-item carga 4t" data-capacity="2 pasajeros" data-load="500 kg" data-consumption="Optimo para rutas de reparto" data-brakes="Tambor reforzado" data-warranty="12 meses o 20,000 km" data-maintenance="Cada 5,000 km">
             <article class="model-card-modern">
               <img src="../assets/media/images/MAXIMA GLP.png" alt="Modelo Maxima GLP" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
@@ -192,7 +261,7 @@
             </article>
           </div>
 
-          <div class="col-md-6 col-xl-4 filter-item carga 4t">
+          <div class="col-md-6 col-xl-4 filter-item carga 4t" data-capacity="2 pasajeros" data-load="550 kg" data-consumption="Eficiente para trayectos largos" data-brakes="Tambor reforzado" data-warranty="12 meses o 20,000 km" data-maintenance="Cada 5,000 km">
             <article class="model-card-modern">
               <img src="../assets/media/images/Maxima-Z-LPG-Yellow-FRONT-7x8-righ2.png" alt="Modelo Maxima Z LPG" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
@@ -211,7 +280,7 @@
             </article>
           </div>
 
-          <div class="col-md-6 col-xl-4 filter-item carga 4t">
+          <div class="col-md-6 col-xl-4 filter-item carga 4t" data-capacity="2 pasajeros" data-load="600 kg" data-consumption="Balance entre potencia y ahorro" data-brakes="Tambor reforzado" data-warranty="12 meses o 20,000 km" data-maintenance="Cada 5,000 km">
             <article class="model-card-modern">
               <img src="../assets/media/images/TORITO-TITANIO-250-700X590.png" alt="Modelo Titanio 250" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
@@ -230,7 +299,7 @@
             </article>
           </div>
 
-          <div class="col-md-6 col-xl-4 filter-item pasajeros 4t">
+          <div class="col-md-6 col-xl-4 filter-item pasajeros 4t" data-capacity="3 pasajeros" data-load="340 kg" data-consumption="Consumo eficiente en ciudad" data-brakes="Tambor delantero y trasero" data-warranty="12 meses o 20,000 km" data-maintenance="Cada 5,000 km">
             <article class="model-card-modern">
               <img src="../assets/media/images/torito_crom_ug_gsl.webp" alt="Modelo CROM UG GSL" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
@@ -248,6 +317,7 @@
               </div>
             </article>
           </div>
+        </div>
         </div>
       </div>
     </section>

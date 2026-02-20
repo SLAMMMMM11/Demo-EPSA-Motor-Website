@@ -62,8 +62,13 @@ img {
 }
 
 .site-navbar .navbar-brand img {
-  height: 34px;
+  height: 52px;
   width: auto;
+}
+
+.site-navbar .brand-strip {
+  margin-left: 0.9rem;
+  justify-content: center;
 }
 
 .brand-strip img {
@@ -799,6 +804,10 @@ img {
   gap: 0.55rem;
 }
 
+.map-address {
+  min-height: 4.2em;
+}
+
 .store-checklist {
   margin: 0;
   padding-left: 1rem;
@@ -893,7 +902,7 @@ img {
   }
 
   .site-navbar .navbar-brand img {
-    height: 30px;
+    height: 42px;
   }
 
   .hero-slide {
@@ -950,6 +959,10 @@ img {
 
   .store-actions {
     gap: 0.45rem;
+  }
+
+  .map-address {
+    min-height: 0;
   }
 
   .testimonial-tile {
