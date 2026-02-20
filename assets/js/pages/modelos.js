@@ -124,10 +124,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function collectModelFacts(item) {
   const facts = [
     { icon: "fa-users", label: "Capacidad", value: item.dataset.capacity || "" },
-    { icon: "fa-box-open", label: "Carga util", value: item.dataset.load || "" },
+    { icon: "fa-box-open", label: "Carga útil", value: item.dataset.load || "" },
     { icon: "fa-gas-pump", label: "Consumo", value: item.dataset.consumption || "" },
     { icon: "fa-circle-stop", label: "Frenos", value: item.dataset.brakes || "" },
-    { icon: "fa-shield-halved", label: "Garantia", value: item.dataset.warranty || "" },
+    { icon: "fa-shield-halved", label: "Garantía", value: item.dataset.warranty || "" },
     { icon: "fa-screwdriver-wrench", label: "Mantenimiento", value: item.dataset.maintenance || "" },
   ];
 

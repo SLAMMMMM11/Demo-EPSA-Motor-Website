@@ -38,7 +38,7 @@
               <li><i class="fa-solid fa-bolt" aria-hidden="true"></i><span>Potencia: ${escapeHtml(model.power)}</span></li>
               <li><i class="fa-solid fa-gauge-high" aria-hidden="true"></i><span>Torque: ${escapeHtml(model.torque)}</span></li>
               <li><i class="fa-solid fa-gas-pump" aria-hidden="true"></i><span>Combustible: ${escapeHtml(model.fuel)}</span></li>
-              <li><i class="fa-solid fa-box-open" aria-hidden="true"></i><span>Carga util: ${escapeHtml(model.load)}</span></li>
+              <li><i class="fa-solid fa-box-open" aria-hidden="true"></i><span>Carga útil: ${escapeHtml(model.load)}</span></li>
             </ul>
           </div>
           <div class="ticker-specs-side">
@@ -48,7 +48,7 @@
           </div>
         </div>
         <div class="ticker-model-actions">
-          <a class="ticker-model-btn" href="pages/modelo-${encodeURIComponent(model.slug)}.html">Ver mas detalles</a>
+          <a class="ticker-model-btn" href="pages/modelo-${encodeURIComponent(model.slug)}.html">Ver más detalles</a>
           <a class="ticker-model-btn ticker-model-btn-primary" href="pages/cotiza.html?modelo=${encodeURIComponent(model.name)}">Cotizar</a>
         </div>
       </div>
