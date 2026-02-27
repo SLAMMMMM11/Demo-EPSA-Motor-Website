@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Modelos Torito Bajaj | EPSA Motor</title>
-  <meta name="description" content="Descubre los modelos Torito Bajaj disponibles en EPSA Motor con fichas técnicas referenciales actualizadas." />
+  <meta name="description" content="Descubre los modelos Torito Bajaj disponibles en EPSA Motor con fichas t&eacute;cnicas referenciales actualizadas." />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#0d1191" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,6 +14,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/components/credit-quote.css" />
   <link rel="stylesheet" href="../assets/css/pages/modelos.css" />
 </head>
 <body>
@@ -23,6 +24,7 @@
       <div>
         <a class="me-2" href="tel:+51907721481">907-721-481</a>
         <a class="me-2" href="https://wa.link/cewyh2" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a class="me-2" href="https://www.facebook.com/EPSAMOTOROFICIAL" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
         <a class="me-2" href="https://www.youtube.com/@toritobajaj723" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         <a class="me-2" href="https://www.tiktok.com/@bajajepsamotor" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         <a href="https://www.instagram.com/bajajmotorperu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -37,7 +39,7 @@
         <img src="../assets/media/images/torito.png" alt="Torito" decoding="async" />
         <img src="../assets/media/images/bajaj_favorita.png" alt="Bajaj" decoding="async" />
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegación">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegaci&oacute;n">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
@@ -46,63 +48,189 @@
           <li class="nav-item"><a class="nav-link" href="cotiza.html">COTIZA</a></li>
           <li class="nav-item"><a class="nav-link active" href="modelos.html">MODELOS</a></li>
           <li class="nav-item"><a class="nav-link" href="repuestos.html">REPUESTOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="contactanos.html">CONTÁCTANOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactanos.html">CONT&Aacute;CTANOS</a></li>
           <li class="nav-item"><a class="nav-link" href="tiendas.html">TIENDAS</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
+  <div class="modal fade model-entry-modal" id="modelEntryModal" tabindex="-1" aria-labelledby="modelEntryTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-1">
+          <div>
+            <p class="survey-kicker mb-1">Bienvenido a EPSA Motor</p>
+            <h2 class="modal-title h4 mb-0" id="modelEntryTitle">&iquest;Qu&eacute; deseas hacer primero?</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body pt-2">
+          <p class="survey-lead mb-3">Selecciona una ruta para empezar de inmediato.</p>
+          <div class="entry-choice-grid">
+            <button type="button" class="entry-choice-btn entry-choice-primary" id="openModelSurveyBtn">
+              <i class="fa-solid fa-compass-drafting" aria-hidden="true"></i>
+              <span>ELIGE TU MODELO</span>
+              <small>Responde el sondeo guiado</small>
+            </button>
+            <button type="button" class="entry-choice-btn entry-choice-secondary" id="openQuoteSimulatorBtn">
+              <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+              <span>SIMULA CUOTAS</span>
+              <small>Calcula cuota e inicial</small>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade model-survey-modal" id="modelSurveyModal" tabindex="-1" aria-labelledby="modelSurveyTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <div>
-            <p class="survey-kicker mb-1">Sondeo comercial EPSA Motor</p>
-            <h2 class="modal-title h4 mb-0" id="modelSurveyTitle">Encuentra tu Torito ideal en menos de 1 minuto</h2>
+            <p class="survey-kicker mb-1">Sondeo r&aacute;pido</p>
+            <h2 class="modal-title h4 mb-0" id="modelSurveyTitle">Elige y recibe tu modelo recomendado</h2>
           </div>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
         <form id="modelSurveyForm">
           <div class="modal-body">
-            <p class="survey-lead mb-3">Responde 3 preguntas y te mostraremos el modelo recomendado para tu tipo de trabajo, con datos de potencia, consumo y capacidad.</p>
-            <div class="survey-trust-row mb-3">
-              <div class="survey-trust-chip"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Recomendaci&oacute;n inmediata</div>
-              <div class="survey-trust-chip"><i class="fa-solid fa-user-tie" aria-hidden="true"></i> Asesor&iacute;a comercial guiada</div>
-              <div class="survey-trust-chip"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Sin costo y sin compromiso</div>
+            <div class="row g-3 align-items-center">
+              <div class="col-lg-8">
+                <fieldset class="mb-3">
+                  <legend class="survey-step-title"><span>1</span> Tipo de uso</legend>
+                  <div class="d-flex flex-wrap gap-2">
+                    <label class="survey-pill"><input type="radio" name="usage" value="pasajeros" required /> Pasajeros</label>
+                    <label class="survey-pill"><input type="radio" name="usage" value="carga" required /> Carga / Mixto</label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="mb-3">
+                  <legend class="survey-step-title"><span>2</span> Combustible</legend>
+                  <div class="d-flex flex-wrap gap-2">
+                    <label class="survey-pill"><input type="radio" name="fuel" value="gasolina" required /> Gasolina</label>
+                    <label class="survey-pill"><input type="radio" name="fuel" value="glp" required /> GLP</label>
+                    <label class="survey-pill"><input type="radio" name="fuel" value="gnv" required /> GNV</label>
+                    <label class="survey-pill"><input type="radio" name="fuel" value="indiferente" required /> Indiferente</label>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend class="survey-step-title"><span>3</span> Prioridad</legend>
+                  <div class="d-flex flex-wrap gap-2">
+                    <label class="survey-pill"><input type="radio" name="priority" value="economia" required /> Econom&iacute;a</label>
+                    <label class="survey-pill"><input type="radio" name="priority" value="potencia" required /> Potencia</label>
+                    <label class="survey-pill"><input type="radio" name="priority" value="capacidad" required /> Capacidad de carga</label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="col-lg-4 d-none d-lg-flex justify-content-center">
+                <figure class="survey-side-figure mb-0">
+                  <img src="../assets/media/images/contacto-chico.png" alt="Conductor evaluando opciones de modelo" loading="lazy" decoding="async" />
+                </figure>
+              </div>
             </div>
-            <fieldset class="mb-3">
-              <legend class="survey-step-title"><span>1</span> &iquest;Qu&eacute; tipo de moto buscas?</legend>
-              <div class="d-flex flex-wrap gap-2">
-                <label class="survey-pill"><input type="radio" name="usage" value="pasajeros" required /> Pasajeros</label>
-                <label class="survey-pill"><input type="radio" name="usage" value="carga" required /> Carga / Mixto</label>
-              </div>
-            </fieldset>
-
-            <fieldset class="mb-3">
-              <legend class="survey-step-title"><span>2</span> &iquest;Qu&eacute; combustible prefieres?</legend>
-              <div class="d-flex flex-wrap gap-2">
-                <label class="survey-pill"><input type="radio" name="fuel" value="gasolina" required /> Gasolina</label>
-                <label class="survey-pill"><input type="radio" name="fuel" value="glp" required /> GLP</label>
-                <label class="survey-pill"><input type="radio" name="fuel" value="gnv" required /> GNV</label>
-                <label class="survey-pill"><input type="radio" name="fuel" value="indiferente" required /> Indiferente</label>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend class="survey-step-title"><span>3</span> &iquest;Qu&eacute; priorizas en tu compra?</legend>
-              <div class="d-flex flex-wrap gap-2">
-                <label class="survey-pill"><input type="radio" name="priority" value="economia" required /> Econom&iacute;a</label>
-                <label class="survey-pill"><input type="radio" name="priority" value="potencia" required /> Potencia</label>
-                <label class="survey-pill"><input type="radio" name="priority" value="capacidad" required /> Capacidad de carga</label>
-              </div>
-            </fieldset>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Ver cat&aacute;logo completo</button>
-            <button type="submit" class="btn btn-epsa survey-submit-btn"><i class="fa-solid fa-magnifying-glass me-2" aria-hidden="true"></i>Ver recomendaci&oacute;n</button>
+            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Ir al cat&aacute;logo</button>
+            <button type="submit" class="btn btn-epsa survey-submit-btn"><i class="fa-solid fa-magnifying-glass me-2" aria-hidden="true"></i>Ver modelo</button>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade model-survey-modal" id="quoteSurveyModal" tabindex="-1" aria-labelledby="quoteSurveyTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <p class="survey-kicker mb-1">Sondeo de cuotas</p>
+            <h2 class="modal-title h4 mb-0" id="quoteSurveyTitle">Simula tu cuota en segundos</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body pt-2">
+          <section class="credit-quote-section js-credit-quote" aria-label="Simulador de cotizaci&oacute;n de cr&eacute;dito">
+            <div class="credit-quote-shell">
+              <div class="credit-quote-head">
+                <p class="mb-0">Referencia comercial para simulaci&oacute;n: <strong class="credit-rate-pill">TCEA 54%</strong>.</p>
+              </div>
+              <div class="quote-commercial-strip">
+                <span class="quote-commercial-pill"><i class="fa-solid fa-bolt" aria-hidden="true"></i>Evaluaci&oacute;n r&aacute;pida</span>
+                <span class="quote-commercial-pill"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i>Proceso seguro</span>
+                <span class="quote-commercial-pill"><i class="fa-solid fa-user-tie" aria-hidden="true"></i>Asesor comercial dedicado</span>
+              </div>
+              <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                  <div class="credit-form-wrap">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label class="form-label" for="creditModelModelos">Modelo</label>
+                        <select class="form-select js-credit-model" id="creditModelModelos">
+                          <option value="4T Plus GSL">4T Plus GSL</option>
+                          <option value="4T Plus GLP">4T Plus GLP</option>
+                          <option value="4T Plus GNV">4T Plus GNV</option>
+                          <option value="2T UG GSL">2T UG GSL</option>
+                          <option value="2T UG GLP">2T UG GLP</option>
+                          <option value="Maxima GLP">Maxima GLP</option>
+                          <option value="Maxima Z LPG">Maxima Z LPG</option>
+                          <option value="Titanio 250">Titanio 250</option>
+                          <option value="CROM UG GSL">CROM UG GSL</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="creditPriceModelos">Precio referencial (S/)</label>
+                        <input class="form-control js-credit-price" id="creditPriceModelos" type="text" readonly />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="creditInitialPctModelos">Inicial (%)</label>
+                        <input class="form-range js-credit-initial-pct" id="creditInitialPctModelos" type="range" min="10" max="60" step="5" value="30" />
+                        <small class="credit-subvalue js-credit-initial-pct-value">30%</small>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="form-label" for="creditTermModelos">Plazo</label>
+                        <select class="form-select js-credit-term" id="creditTermModelos">
+                          <option value="6">6 cuotas</option>
+                          <option value="12" selected>12 cuotas</option>
+                          <option value="18">18 cuotas</option>
+                          <option value="24">24 cuotas</option>
+                          <option value="36">36 cuotas</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="quote-commercial-list mt-3">
+                      <p class="quote-commercial-title mb-2">Beneficios de financiar con EPSA Motor</p>
+                      <ul class="mb-0">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Inicial flexible desde 10%</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Plazos desde 6 hasta 36 cuotas</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i>Acompa&ntilde;amiento comercial durante todo el proceso</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <aside class="credit-results">
+                    <p class="credit-result-label mb-1">Cuota mensual estimada</p>
+                    <p class="credit-result-amount mb-2 js-credit-payment">S/ 0</p>
+                    <div class="credit-result-grid">
+                      <div><span>Inicial estimada</span><strong class="js-credit-initial-amount">S/ 0</strong></div>
+                      <div><span>Monto financiado</span><strong class="js-credit-financed">S/ 0</strong></div>
+                      <div><span>Total a pagar</span><strong class="js-credit-total">S/ 0</strong></div>
+                      <div><span>Inter&eacute;s estimado</span><strong class="js-credit-interest">S/ 0</strong></div>
+                    </div>
+                    <div class="quote-result-note">
+                      <p class="mb-0"><i class="fa-solid fa-circle-info me-2" aria-hidden="true"></i>Simulaci&oacute;n referencial sujeta a evaluaci&oacute;n crediticia.</p>
+                    </div>
+                    <a class="btn btn-epsa mt-3 w-100" href="cotiza.html">Continuar con cotizaci&oacute;n completa</a>
+                    <a class="btn btn-outline-light mt-2 w-100" href="https://wa.link/cewyh2" target="_blank" rel="noopener noreferrer">Quiero hablar con un asesor</a>
+                  </aside>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
@@ -118,11 +246,16 @@
     <section id="modelos" class="py-5">
       <div class="container">
         <article class="modelos-intro mb-4">
-          <p class="about-kicker mb-2">Catálogo EPSA Motor</p>
+          <p class="about-kicker mb-2">Cat&aacute;logo EPSA Motor</p>
           <h2 class="section-title mb-2">Todos los modelos disponibles en nuestras sedes</h2>
-          <p class="mb-0">Información técnica referencial para orientación comercial. Confirmar disponibilidad, versiones y equipamiento al momento de cotizar.</p>
-          <p class="mb-0 mt-2"><small>Última revisión referencial: febrero de 2026.</small></p>
+          <p class="mb-0">Informaci&oacute;n t&eacute;cnica referencial para orientaci&oacute;n comercial. Confirmar disponibilidad, versiones y equipamiento al momento de cotizar.</p>
+          <p class="mb-0 mt-2"><small>&Uacute;ltima revisi&oacute;n referencial: febrero de 2026.</small></p>
+          <div class="modelos-quick-actions mt-3">
+            <button type="button" class="btn btn-epsa" id="openModelSurveyPageBtn"><i class="fa-solid fa-compass-drafting me-2" aria-hidden="true"></i>Elige tu moto</button>
+            <button type="button" class="btn btn-outline-light" id="openQuoteSurveyPageBtn"><i class="fa-solid fa-calculator me-2" aria-hidden="true"></i>Simula cuotas</button>
+          </div>
         </article>
+
 
         <section id="modelRecommendation" class="model-recommendation d-none" aria-live="polite">
           <article class="model-feature-card">
@@ -166,7 +299,7 @@
                   <li>Motor: 198.88 cc</li>
                   <li>Potencia: 10.19 HP</li>
                   <li>Torque: 17.10 Nm</li>
-                  <li>Velocidad máx.: 65 km/h</li>
+                  <li>Velocidad m&aacute;x.: 65 km/h</li>
                 </ul>
               </div>
               <div class="model-actions">
@@ -180,7 +313,7 @@
               <img src="../assets/media/images/4T PLUS GLP.png" alt="Modelo 4T Plus GLP" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
                 <h3>4T Plus GLP</h3>
-                <p>Versión para pasajeros con enfoque en ahorro de combustible y operación continua.</p>
+                <p>Versi&oacute;n para pasajeros con enfoque en ahorro de combustible y operaci&oacute;n continua.</p>
                 <ul>
                   <li>Motor: 198.88 cc</li>
                   <li>Potencia: 9.32 HP</li>
@@ -199,7 +332,7 @@
               <img src="../assets/media/images/4T PLUS GNV.png" alt="Modelo 4T Plus GNV" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
                 <h3>4T Plus GNV</h3>
-                <p>Configuración 4T para pasajeros con autonomía extendida en operación diaria.</p>
+                <p>Configuraci&oacute;n 4T para pasajeros con autonom&iacute;a extendida en operaci&oacute;n diaria.</p>
                 <ul>
                   <li>Motor: 198.88 cc</li>
                   <li>Potencia: 8.78 HP</li>
@@ -237,12 +370,12 @@
               <img src="../assets/media/images/2T UG GLP.png" alt="Modelo 2T UG GLP" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
                 <h3>2T UG GLP</h3>
-                <p>Versión 2T de pasajeros enfocada en economía operativa con sistema GLP.</p>
+                <p>Versi&oacute;n 2T de pasajeros enfocada en econom&iacute;a operativa con sistema GLP.</p>
                 <ul>
                   <li>Motor: 145.45 cc</li>
                   <li>Potencia: 8.58 HP</li>
                   <li>Torque: 15.00 Nm</li>
-                  <li>Velocidad máx.: 60 km/h</li>
+                  <li>Velocidad m&aacute;x.: 60 km/h</li>
                 </ul>
               </div>
               <div class="model-actions">
@@ -261,7 +394,7 @@
                   <li>Motor: 236.2 cc</li>
                   <li>Potencia: 11.06 HP</li>
                   <li>Torque: 17.55 Nm</li>
-                  <li>Velocidad máx.: 62 km/h</li>
+                  <li>Velocidad m&aacute;x.: 62 km/h</li>
                 </ul>
               </div>
               <div class="model-actions">
@@ -275,7 +408,7 @@
               <img src="../assets/media/images/Maxima-Z-LPG-Yellow-FRONT-7x8-righ2.png" alt="Modelo Maxima Z LPG" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
                 <h3>Maxima Z LPG</h3>
-                <p>Versión de plataforma robusta para carga, construida para rutas intensivas.</p>
+                <p>Versi&oacute;n de plataforma robusta para carga, construida para rutas intensivas.</p>
                 <ul>
                   <li>Motor: 236.2 cc DTS-i</li>
                   <li>Potencia: 8.25 kW</li>
@@ -299,7 +432,7 @@
                   <li>Motor: 236.2 cc</li>
                   <li>Potencia: 9.86 HP</li>
                   <li>Torque: 18.00 Nm</li>
-                  <li>Velocidad máx.: 62 km/h</li>
+                  <li>Velocidad m&aacute;x.: 62 km/h</li>
                 </ul>
               </div>
               <div class="model-actions">
@@ -313,7 +446,7 @@
               <img src="../assets/media/images/torito_crom_ug_gsl.webp" alt="Modelo CROM UG GSL" class="img-fluid model-image" loading="lazy" decoding="async" />
               <div class="model-content">
                 <h3>CROM UG GSL</h3>
-                <p>Versión enfocada en pasajeros con desempeño constante y diseño de cabina moderna.</p>
+                <p>Versi&oacute;n enfocada en pasajeros con desempe&ntilde;o constante y dise&ntilde;o de cabina moderna.</p>
                 <ul>
                   <li>Cilindraje: 200 cc (referencial)</li>
                   <li>Torque: 17.00 Nm</li>
@@ -339,26 +472,26 @@
           <h3 class="footer-title">EPSA MOTOR</h3>
           <p class="footer-text mb-1">Inversiones EPSA Motor S.A.C.</p>
           <p class="footer-text mb-1">RUC: 205451649494</p>
-          <p class="footer-text mb-0">Venta y soporte para Torito Bajaj en Perú.</p>
+          <p class="footer-text mb-0">Venta y soporte para Torito Bajaj en Per&uacute;.</p>
         </div>
         <div class="col-md-6 col-lg-3">
           <h3 class="footer-title">Contacto</h3>
           <p class="footer-text mb-1"><a class="footer-link" href="mailto:inversionesepsamotor@gmail.com">inversionesepsamotor@gmail.com</a></p>
           <p class="footer-text mb-1"><a class="footer-link" href="tel:+51907721481">+51 907 721 481</a></p>
-          <p class="footer-text mb-0"><a class="footer-link" href="https://wa.link/cewyh2" target="_blank" rel="noopener noreferrer">Atención por WhatsApp</a></p>
+          <p class="footer-text mb-0"><a class="footer-link" href="https://wa.link/cewyh2" target="_blank" rel="noopener noreferrer">Atenci&oacute;n por WhatsApp</a></p>
         </div>
         <div class="col-md-6 col-lg-3">
           <h3 class="footer-title">Horarios y sedes</h3>
-          <p class="footer-text mb-1">Lun - Sáb: 09:00 a 17:00</p>
+          <p class="footer-text mb-1">Lun - S&aacute;b: 09:00 a 17:00</p>
           <p class="footer-text mb-1">Sede Comas: Av. 22 de Agosto</p>
-          <p class="footer-text mb-0">Sede Ventanilla: Av. José Olaya Balandra</p>
+          <p class="footer-text mb-0">Sede Ventanilla: Av. Jos&eacute; Olaya Balandra</p>
         </div>
         <div class="col-md-6 col-lg-3">
-          <h3 class="footer-title">Enlaces rápidos</h3>
+          <h3 class="footer-title">Enlaces r&aacute;pidos</h3>
           <p class="footer-text mb-1"><a class="footer-link" href="modelos.html">Modelos</a></p>
           <p class="footer-text mb-1"><a class="footer-link" href="repuestos.html">Repuestos</a></p>
-          <p class="footer-text mb-1"><a class="footer-link" href="contactanos.html">Contáctanos</a></p>
-          <p class="footer-text mb-2"><a class="footer-link" href="tyc.html">Términos y condiciones</a></p>
+          <p class="footer-text mb-1"><a class="footer-link" href="contactanos.html">Cont&aacute;ctanos</a></p>
+          <p class="footer-text mb-2"><a class="footer-link" href="tyc.html">T&eacute;rminos y condiciones</a></p>
           <div>
             <a class="social-icon" href="https://www.facebook.com/EPSAMOTOROFICIAL" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
             <a class="social-icon" href="https://www.tiktok.com/@bajajepsamotor" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
@@ -370,7 +503,7 @@
       <hr class="footer-divider my-4" />
       <div class="text-center">
         <small class="text-light d-block">&copy; EPSA Motor - Todos los derechos reservados</small>
-        <small class="text-light d-block">Sitio optimizado para dispositivos móviles y escritorio</small>
+        <small class="text-light d-block">Sitio optimizado para dispositivos m&oacute;viles y escritorio</small>
       </div>
     </div>
   </footer>
@@ -381,6 +514,6 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script defer src="../assets/js/main.js"></script>
   <script defer src="../assets/js/pages/modelos.js"></script>
+  <script defer src="../assets/js/components/credit-quote.js"></script>
 </body>
 </html>
-

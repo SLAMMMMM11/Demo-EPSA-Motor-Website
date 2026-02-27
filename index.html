@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
@@ -31,6 +33,8 @@
         <a class="me-2" href="tel:+51907721481">907-721-481</a>
         <a class="me-2" href="https://wa.link/cewyh2" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
             class="fa-brands fa-whatsapp"></i></a>
+        <a class="me-2" href="https://www.facebook.com/EPSAMOTOROFICIAL" target="_blank" rel="noopener noreferrer"
+          aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
         <a class="me-2" href="https://www.youtube.com/@toritobajaj723" target="_blank" rel="noopener noreferrer"
           aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         <a class="me-2" href="https://www.tiktok.com/@bajajepsamotor" target="_blank" rel="noopener noreferrer"
@@ -160,7 +164,7 @@
       </div>
     </section>
 
-    <section class="model-ticker-section py-4">
+    <section class="model-ticker-section py-4" data-aos="fade-up">
       <div class="container">
         <article class="model-ticker-shell">
           <p class="about-kicker mb-2">Modelos destacados</p>
@@ -169,8 +173,15 @@
         </article>
       </div>
       <div class="container mt-3">
-        <div id="homeModelTickerWrap" class="model-ticker-wrap" aria-label="Carrusel automático de modelos">
-          <div id="homeModelTickerTrack" class="model-ticker-track"></div>
+        <div id="homeModelSwiper" class="swiper model-showcase-swiper" aria-label="Carrusel automático de modelos">
+          <div id="homeModelSwiperWrapper" class="swiper-wrapper"></div>
+          <button type="button" class="model-showcase-arrow model-showcase-prev" aria-label="Modelo anterior">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="model-showcase-arrow model-showcase-next" aria-label="Siguiente modelo">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+          <div class="swiper-pagination model-showcase-pagination"></div>
         </div>
       </div>
     </section>
@@ -179,7 +190,7 @@
       <div class="container">
         <div class="about-shell">
           <div class="row g-4 align-items-stretch">
-            <div class="col-xl-7">
+            <div class="col-xl-6">
               <article class="about-card h-100">
                 <p class="about-kicker mb-2">Nuestra Historia</p>
                 <h2 class="section-title mb-2">Quiénes Somos</h2>
@@ -219,9 +230,9 @@
 
               </article>
             </div>
-            <div class="col-xl-5">
+            <div class="col-xl-6">
               <article class="about-media h-100">
-                <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-sm">
+                <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow-sm about-video-frame">
                   <iframe src="https://www.youtube.com/embed/iQJ0CiVMwJk?start=2" title="Video Torito Bajaj"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -693,6 +704,8 @@
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script defer src="assets/js/main.js"></script>
 </body>
 

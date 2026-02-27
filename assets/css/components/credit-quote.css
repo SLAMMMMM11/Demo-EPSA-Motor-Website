@@ -1,0 +1,138 @@
+.credit-quote-section {
+  color: #fff;
+}
+
+.credit-quote-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background:
+    radial-gradient(circle at 90% 8%, rgba(222, 57, 37, 0.24), transparent 36%),
+    radial-gradient(circle at 12% 90%, rgba(59, 130, 246, 0.2), transparent 42%),
+    linear-gradient(165deg, #071024 0%, #0f1e38 47%, #13244a 100%);
+  box-shadow: 0 20px 44px rgba(4, 8, 21, 0.44);
+  padding: 1rem;
+}
+
+.credit-quote-head {
+  margin-bottom: 0.9rem;
+}
+
+.credit-kicker {
+  color: #fecaca;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.credit-quote-head p {
+  color: #dbeafe;
+  max-width: 68ch;
+}
+
+.credit-rate-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid rgba(252, 165, 165, 0.6);
+  background: rgba(127, 29, 29, 0.28);
+  color: #fee2e2;
+  font-size: 0.86rem;
+  letter-spacing: 0.03em;
+}
+
+.credit-form-wrap {
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.85rem;
+}
+
+.credit-form-wrap .form-label {
+  color: #e2e8f0;
+  margin-bottom: 0.35rem;
+}
+
+.credit-form-wrap .form-control,
+.credit-form-wrap .form-select {
+  background: rgba(11, 18, 35, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: #f8fafc;
+}
+
+.credit-form-wrap .form-control:focus,
+.credit-form-wrap .form-select:focus {
+  border-color: rgba(248, 113, 113, 0.82);
+  box-shadow: 0 0 0 0.18rem rgba(239, 68, 68, 0.22);
+}
+
+.credit-form-wrap .form-range {
+  accent-color: #e11d48;
+}
+
+.credit-subvalue {
+  color: #bfdbfe;
+  font-size: 0.82rem;
+}
+
+.credit-results {
+  height: 100%;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  background: linear-gradient(180deg, rgba(127, 29, 29, 0.28), rgba(23, 37, 84, 0.44));
+  padding: 0.95rem;
+}
+
+.credit-result-label {
+  color: #fecaca;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.credit-result-amount {
+  color: #fff;
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.credit-result-grid {
+  display: grid;
+  gap: 0.48rem;
+}
+
+.credit-result-grid div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.45rem;
+  padding: 0.42rem 0.46rem;
+  border-radius: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(11, 18, 35, 0.36);
+}
+
+.credit-result-grid span {
+  color: #dbeafe;
+  font-size: 0.82rem;
+}
+
+.credit-result-grid strong {
+  color: #fff;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 767px) {
+  .credit-quote-shell {
+    padding: 0.85rem;
+  }
+
+  .credit-form-wrap,
+  .credit-results {
+    padding: 0.8rem;
+  }
+}

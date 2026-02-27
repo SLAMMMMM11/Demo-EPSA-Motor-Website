@@ -15,13 +15,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../assets/css/styles.css" />
 </head>
-<body>
+<body data-model="4t-plus-gsl">
   <header class="topbar py-2">
     <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
       <a href="mailto:inversionesepsamotor@gmail.com"><i class="fa-solid fa-envelope"></i> inversionesepsamotor@gmail.com</a>
       <div>
         <a class="me-2" href="tel:+51907721481">907-721-481</a>
         <a class="me-2" href="https://wa.link/cewyh2" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a class="me-2" href="https://www.facebook.com/EPSAMOTOROFICIAL" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
         <a class="me-2" href="https://www.youtube.com/@toritobajaj723" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         <a class="me-2" href="https://www.tiktok.com/@bajajepsamotor" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         <a href="https://www.instagram.com/bajajmotorperu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -36,7 +37,7 @@
         <img src="../assets/media/images/torito.png" alt="Torito" decoding="async" />
         <img src="../assets/media/images/bajaj_favorita.png" alt="Bajaj" decoding="async" />
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegación">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegaci&oacute;n">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
@@ -45,7 +46,7 @@
           <li class="nav-item"><a class="nav-link" href="cotiza.html">COTIZA</a></li>
           <li class="nav-item"><a class="nav-link active" href="modelos.html">MODELOS</a></li>
           <li class="nav-item"><a class="nav-link" href="repuestos.html">REPUESTOS</a></li>
-          <li class="nav-item"><a class="nav-link" href="contactanos.html">CONTÁCTANOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactanos.html">CONT&Aacute;CTANOS</a></li>
           <li class="nav-item"><a class="nav-link" href="tiendas.html">TIENDAS</a></li>
         </ul>
       </div>
@@ -79,6 +80,22 @@
               </div>
             </div>
           </div>
+        </article>
+
+        <article class="model-detail-card mt-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <h3 class="h4 mb-0 text-white">Piezas y componentes destacados</h3>
+            <span class="about-kicker mb-0">Detalle t&eacute;cnico comercial</span>
+          </div>
+          <div id="detailPartsGrid" class="model-parts-grid"></div>
+        </article>
+
+        <article class="model-detail-card mt-4">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <h3 class="h4 mb-0 text-white">Comentarios de compradores</h3>
+            <span class="about-kicker mb-0">Experiencias reales</span>
+          </div>
+          <div id="detailCommentsList" class="buyer-comments-list"></div>
         </article>
       </div>
     </section>
