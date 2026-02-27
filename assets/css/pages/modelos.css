@@ -809,3 +809,155 @@
     height: 1.85rem;
   }
 }
+
+@media (max-width: 991px) {
+  .modelos-intro {
+    padding: 0.9rem;
+  }
+
+  .modelos-quick-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .filter-section {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.45rem;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+    margin-bottom: 1.1rem;
+    text-align: left;
+    scrollbar-width: thin;
+  }
+
+  .filter-btn {
+    margin: 0;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  .model-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .model-content p {
+    min-height: 0;
+    font-size: 0.86rem;
+  }
+
+  .model-actions.has-two-actions {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .model-feature-actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .survey-pill {
+    padding: 0.55rem 0.82rem;
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .model-entry-modal .modal-dialog,
+  .model-survey-modal .modal-dialog {
+    margin: 0.65rem;
+  }
+
+  .model-entry-modal .modal-content,
+  .model-survey-modal .modal-content {
+    border-radius: 0.85rem;
+  }
+
+  .model-survey-modal .modal-body {
+    max-height: calc(100vh - 11.5rem);
+    overflow: auto;
+    padding-top: 0.7rem;
+  }
+
+  #quoteSurveyModal .modal-body {
+    padding-top: 0.5rem;
+  }
+
+  #quoteSurveyModal .quote-commercial-strip {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  #quoteSurveyModal .quote-commercial-pill {
+    width: 100%;
+    justify-content: center;
+    padding: 0.4rem 0.55rem;
+  }
+
+  #quoteSurveyModal .credit-result-grid span,
+  #quoteSurveyModal .credit-result-grid strong {
+    font-size: 0.8rem;
+  }
+
+  #quoteSurveyModal .credit-results .btn {
+    min-height: 2.5rem;
+  }
+
+  .model-card-modern:hover {
+    transform: none;
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.32);
+  }
+
+  .model-card-modern:hover .model-image {
+    transform: none;
+    filter: none;
+  }
+}
+
+@media (max-width: 575px) {
+  #modelos {
+    padding-top: 2.25rem !important;
+  }
+
+  .modelos-intro {
+    border-radius: 0.8rem;
+  }
+
+  .model-image {
+    aspect-ratio: 4 / 3;
+    padding: 0.3rem;
+  }
+
+  .model-content {
+    padding: 0.78rem 0.82rem 0.62rem;
+  }
+
+  .model-actions {
+    padding: 0 0.82rem 0.82rem;
+  }
+
+  .entry-choice-btn {
+    padding: 0.75rem 0.78rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "note";
+  }
+
+  .entry-choice-btn i {
+    display: none;
+  }
+
+  .survey-step-title {
+    font-size: 0.88rem;
+  }
+
+  .survey-submit-btn {
+    min-width: 100%;
+  }
+
+  .model-feature-card {
+    padding: 0.82rem;
+  }
+}

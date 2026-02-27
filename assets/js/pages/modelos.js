@@ -219,11 +219,31 @@ document.addEventListener("DOMContentLoaded", () => {
     quoteSurveyModal?.show();
   });
 
+  const sondeoParam = new URLSearchParams(window.location.search).get("sondeo");
+  const openByShortcut = () => {
+    if (sondeoParam === "modelo") {
+      surveyForm?.reset();
+      showCatalogOnly();
+      surveyModal?.show();
+      return true;
+    }
+
+    if (sondeoParam === "cuotas") {
+      showCatalogOnly();
+      quoteSurveyModal?.show();
+      return true;
+    }
+
+    return false;
+  };
+
   // Selector inicial al ingresar.
-  if (entryModal) {
-    entryModal.show();
-  } else if (surveyModal) {
-    surveyModal.show();
+  if (!openByShortcut()) {
+    if (entryModal) {
+      entryModal.show();
+    } else if (surveyModal) {
+      surveyModal.show();
+    }
   }
 
   // Estado inicial del catálogo con los filtros combinados.

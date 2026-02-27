@@ -161,6 +161,42 @@ img {
   width: 40px;
 }
 
+.mobile-survey-cta {
+  background: radial-gradient(circle at 80% 0%, #1a2233 0%, #0a0c10 56%, #050507 100%);
+  padding: 0.7rem 0 1rem;
+}
+
+.mobile-survey-shell {
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  padding: 0.75rem;
+}
+
+.mobile-survey-kicker {
+  color: #fca5a5;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.mobile-survey-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.mobile-survey-actions .btn {
+  min-height: 2.4rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #homeHeroCarousel .carousel-control-prev,
 #homeHeroCarousel .carousel-control-next {
   width: 4.25rem;
